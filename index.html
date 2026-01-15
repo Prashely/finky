@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finky's Beauty Parlour | Premium Nail Salon</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      /* Custom gradient and animation */
+      .gradient-bg {
+        background: linear-gradient(135deg, #fce7f3 0%, #f0f9ff 100%);
+      }
+
+      .hero-gradient {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+          url("https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .nail-sample {
+        transition: transform 0.5s ease;
+      }
+
+      .nail-sample:hover {
+        transform: scale(1.05);
+      }
+
+      /* Custom animation for the booking button */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .pulse-animation {
+        animation: pulse 2s infinite;
+      }
+
+      /* Custom border for images */
+      .image-border {
+        border: 8px solid white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+      <nav
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center"
+          >
+            <i class="fas fa-spa text-white"></i>
+          </div>
+          <span class="text-xl font-bold text-gray-900"
+            >Finky's Beauty Parlour</span
+          >
+        </div>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="font-medium hover:text-pink-600 transition"
+            >Home</a
+          >
+          <a href="#services" class="font-medium hover:text-pink-600 transition"
+            >Services</a
+          >
+          <a href="#gallery" class="font-medium hover:text-pink-600 transition"
+            >Gallery</a
+          >
+          <a href="#about" class="font-medium hover:text-pink-600 transition"
+            >About</a
+          >
+          <a href="#contact" class="font-medium hover:text-pink-600 transition"
+            >Contact</a
+          >
+        </div>
+
+        <a
+          href="FRESHA_BOOKING_LINK_HERE"
+          class="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition flex items-center pulse-animation"
+        >
+          <i class="fas fa-calendar-check mr-2"></i> Book Now
+        </a>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-gradient text-white">
+      <div class="max-w-7xl mx-auto px-6 py-32 md:py-40 text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="text-pink-300">Elevate</span> Your Nail Experience
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-100">
+          Professional nail care in a clean, modern environment. Experience the
+          perfect blend of artistry and hygiene.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
+          <a
+            href="FRESHA_BOOKING_LINK_HERE"
+            class="bg-pink-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-pink-700 transition flex items-center"
+          >
+            <i class="fas fa-gem mr-3"></i> Book Appointment
+          </a>
+          <a
+            href="https://www.tiktok.com/@finkymonyamane"
+            target="_blank"
+            class="bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/30 transition flex items-center"
+          >
+            <i class="fab fa-tiktok mr-3"></i> See Our TikTok
+          </a>
+        </div>
+
+        <!-- Trust badges -->
+        <div
+          class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+        >
+          <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl">
+            <i class="fas fa-shield-alt text-3xl text-pink-300 mb-2"></i>
+            <p class="font-medium">Sanitized Tools</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl">
+            <i class="fas fa-star text-3xl text-pink-300 mb-2"></i>
+            <p class="font-medium">Premium Products</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl">
+            <i class="fas fa-clock text-3xl text-pink-300 mb-2"></i>
+            <p class="font-medium">Precise Booking</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl">
+            <i class="fas fa-award text-3xl text-pink-300 mb-2"></i>
+            <p class="font-medium">Expert Technicians</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 gradient-bg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From classic manicures to intricate nail art, we offer a
+            comprehensive range of nail services tailored to your style.
+          </p>
+          <p class="mt-4 text-lg text-gray-700 font-medium">
+            View all services, details and pricing on our booking platform
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <!-- Service Card 1 -->
+          <div class="service-card bg-white p-8 rounded-2xl shadow-lg">
+            <div
+              class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-hand-sparkles text-3xl text-pink-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Manicure Perfection</h3>
+            <p class="text-gray-600 mb-6">
+              Gel overlays, extensions, French manicures, and custom nail art.
+              Each service includes cuticle care, shaping, and expert
+              application.
+            </p>
+            <a
+              href="FRESHA_BOOKING_LINK_HERE"
+              class="inline-flex items-center text-pink-600 font-semibold"
+            >
+              View options <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card bg-white p-8 rounded-2xl shadow-lg">
+            <div
+              class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-foot text-3xl text-blue-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Pedicure Luxury</h3>
+            <p class="text-gray-600 mb-6">
+              Relaxing pedicures with exfoliation, massage, and gel polish.
+              Choose from classic, French, or nail extensions for your toes.
+            </p>
+            <a
+              href="FRESHA_BOOKING_LINK_HERE"
+              class="inline-flex items-center text-blue-600 font-semibold"
+            >
+              View options <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card bg-white p-8 rounded-2xl shadow-lg">
+            <div
+              class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-palette text-3xl text-purple-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Nail Artistry</h3>
+            <p class="text-gray-600 mb-6">
+              Transform your nails into works of art. From minimalist designs to
+              intricate patterns, our artists bring your vision to life.
+            </p>
+            <a
+              href="FRESHA_BOOKING_LINK_HERE"
+              class="inline-flex items-center text-purple-600 font-semibold"
+            >
+              View options <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="FRESHA_BOOKING_LINK_HERE"
+            class="inline-flex items-center bg-black text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-800 transition"
+          >
+            <i class="fas fa-list-alt mr-3"></i> View All Services on Fresha
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">
+              Why <span class="text-pink-600">Finky's</span> Beauty Parlour?
+            </h2>
+
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="mr-4 mt-1">
+                  <div
+                    class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center"
+                  >
+                    <i class="fas fa-check text-green-600 text-xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold mb-2">Hygiene First</h4>
+                  <p class="text-gray-600">
+                    We follow strict sanitization protocols. All tools are
+                    sterilized between clients, and we use disposable files and
+                    buffers.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="mr-4 mt-1">
+                  <div
+                    class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center"
+                  >
+                    <i class="fas fa-gem text-blue-600 text-xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold mb-2">Premium Products</h4>
+                  <p class="text-gray-600">
+                    We use only high-quality, long-lasting gel polishes and nail
+                    products that are gentle on your nails and durable.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="mr-4 mt-1">
+                  <div
+                    class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center"
+                  >
+                    <i class="fas fa-user-tie text-purple-600 text-xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold mb-2">Expert Technicians</h4>
+                  <p class="text-gray-600">
+                    Our nail technicians are trained in the latest techniques
+                    and trends, ensuring you get professional results every
+                    time.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="image-border rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1607779097330-9b6bdead68d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Nail salon interior"
+                class="w-full h-96 object-cover"
+              />
+            </div>
+
+            <!-- Decorative element -->
+            <div
+              class="absolute -bottom-6 -right-6 w-40 h-40 bg-pink-100 rounded-full -z-10"
+            ></div>
+            <div
+              class="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-full -z-10"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Our Nail Art Gallery
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Browse our portfolio of stunning nail designs. Follow us on TikTok
+            for tutorials and latest trends.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+          <div class="nail-sample image-border rounded-xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1604656853577-8e5dbf9b979a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Nail design 1"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="nail-sample image-border rounded-xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1607779097330-9b6bdead68d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Nail design 2"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="nail-sample image-border rounded-xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1607779097330-9b6bdead68d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Nail design 3"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="nail-sample image-border rounded-xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1604656853577-8e5dbf9b979a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Nail design 4"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="https://www.tiktok.com/@finkymonyamane"
+            target="_blank"
+            class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:opacity-90 transition"
+          >
+            <i class="fab fa-tiktok mr-3 text-xl"></i> See More on TikTok
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING PROCESS SECTION -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">How to Book</h2>
+
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="text-center">
+            <div class="relative inline-block mb-6">
+              <div
+                class="w-20 h-20 rounded-full bg-pink-100 flex items-center justify-center text-3xl font-bold text-pink-600"
+              >
+                1
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Select Your Service</h3>
+            <p class="text-gray-600">
+              Browse our full menu of services on Fresha. Choose between
+              manicures, pedicures, nail art, and more.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="relative inline-block mb-6">
+              <div
+                class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center text-3xl font-bold text-blue-600"
+              >
+                2
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Pick Date & Time</h3>
+            <p class="text-gray-600">
+              Select your preferred date and time from our real-time
+              availability. Receive instant confirmation.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="relative inline-block mb-6">
+              <div
+                class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center text-3xl font-bold text-green-600"
+              >
+                3
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Enjoy Your Visit</h3>
+            <p class="text-gray-600">
+              Arrive at our salon and experience premium nail care. Relax while
+              we create your perfect nails.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section
+      class="py-24 bg-gradient-to-r from-gray-900 to-black text-white text-center"
+    >
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8">
+          Ready for Perfect Nails?
+        </h2>
+        <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          Join our satisfied clients and experience the Finky's difference. Book
+          your appointment today through our secure booking platform.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a
+            href="FRESHA_BOOKING_LINK_HERE"
+            class="bg-white text-black px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-200 transition flex items-center justify-center"
+          >
+            <i class="fas fa-calendar-alt mr-3"></i> Book on Fresha
+          </a>
+          <a
+            href="https://www.tiktok.com/@finkymonyamane"
+            target="_blank"
+            class="bg-gray-800 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-700 transition flex items-center justify-center"
+          >
+            <i class="fab fa-tiktok mr-3"></i> Follow on TikTok
+          </a>
+        </div>
+
+        <div
+          class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm"
+        >
+          <div>
+            <i class="fas fa-clock text-2xl text-pink-400 mb-2"></i>
+            <p>Flexible Hours</p>
+          </div>
+          <div>
+            <i class="fas fa-map-marker-alt text-2xl text-pink-400 mb-2"></i>
+            <p>Convenient Location</p>
+          </div>
+          <div>
+            <i class="fas fa-credit-card text-2xl text-pink-400 mb-2"></i>
+            <p>Secure Payments</p>
+          </div>
+          <div>
+            <i class="fas fa-users text-2xl text-pink-400 mb-2"></i>
+            <p>Friendly Staff</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="py-12 bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-10">
+          <div>
+            <div class="flex items-center space-x-3 mb-6">
+              <div
+                class="w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center"
+              >
+                <i class="fas fa-spa text-white text-xl"></i>
+              </div>
+              <span class="text-2xl font-bold">Finky's Beauty Parlour</span>
+            </div>
+            <p class="text-gray-400 mb-6">
+              Professional nail care services in a clean, modern environment. We
+              specialize in gel manicures, pedicures, and custom nail art.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.tiktok.com/@finkymonyamane"
+                target="_blank"
+                class="text-gray-400 hover:text-pink-400 text-xl"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-pink-400 text-xl">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-pink-400 text-xl">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#gallery"
+                  class="text-gray-400 hover:text-white transition"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="FRESHA_BOOKING_LINK_HERE"
+                  class="text-gray-400 hover:text-white transition"
+                  >Book Now</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-6">Contact Info</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt text-pink-400 mr-3"></i>
+                <span>061 420 2714</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-pink-400 mr-3"></i>
+                <span>info@finkysbeauty.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-tiktok text-pink-400 mr-3"></i>
+                <span>@finkymonyamane</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-clock text-pink-400 mr-3"></i>
+                <span>By Appointment Only</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500 text-sm"
+        >
+          <p>© 2023 Finky's Beauty Parlour. All rights reserved.</p>
+          <p class="mt-2">Bookings available exclusively through Fresha</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/27614202714?text=Hi%20Finky's%20Beauty%20Parlour,%20I'd%20like%20to%20inquire%20about%20an%20appointment"
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Add active class to nav links on scroll
+      window.addEventListener("scroll", function () {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("text-pink-600");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("text-pink-600");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
