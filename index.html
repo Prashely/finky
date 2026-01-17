@@ -213,33 +213,6 @@
         transform: scale(1.05);
       }
 
-      /* Carousel animation */
-      .testimonial-card {
-        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        transform: translateX(0);
-      }
-
-      .testimonial-card.active {
-        opacity: 1 !important;
-        position: relative !important;
-        transform: translateX(0) scale(1);
-      }
-
-      .testimonial-card:not(.active) {
-        transform: translateX(100px);
-      }
-
-      /* Hover effects */
-      .testimonial-card:hover {
-        box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.25);
-      }
-      /* Responsive adjustments */
-      @media (max-width: 1024px) {
-        .testimonial-carousel {
-          margin-bottom: 3rem;
-        }
-      }
-
       /* Custom animation for the booking button */
       @keyframes pulse {
         0% {
@@ -542,7 +515,9 @@
             Nails To Be Admired
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Each set reflects confidence, beauty, and personal style.
+            These are real clients and real results. Each set reflects
+            confidence, beauty, and personal style. Follow on TikTok to see more
+            transformations.
           </p>
         </div>
 
@@ -649,267 +624,119 @@
       </div>
     </section>
 
-    <!-- REVIEWS -->
-    <section class="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <!-- BOOKING PROCESS SECTION -->
+    <section class="py-24 bg-gradient-to-b from-white to-gray-50">
       <div class="max-w-7xl mx-auto px-6">
-        <!-- Section Header -->
-        <div class="text-center mb-20">
-          <div class="inline-flex items-center justify-center mb-4">
-            <div
-              class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-3"
-            >
-              <i class="fas fa-heart text-pink-500 text-xl"></i>
-            </div>
-            <h2
-              class="text-5xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent"
-            >
-              Client Love
-            </h2>
-          </div>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Real stories from our satisfied clients. Their joy is our greatest
-            achievement.
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="text-pink-600">Client</span> Stories
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Real experiences from our beautiful community
           </p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <!-- Left Side: Testimonials Carousel -->
+          <!-- Left: Testimonial -->
           <div class="relative">
-            <!-- Testimonial Cards Container -->
-            <div class="testimonial-carousel space-y-8">
-              <!-- Testimonial 1 -->
-              <div
-                class="testimonial-card active bg-white p-10 rounded-3xl shadow-2xl shadow-pink-100 border border-gray-100"
-              >
-                <div class="flex items-center mb-6">
-                  <div class="flex mr-4">
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl"></i>
-                  </div>
-                  <span class="text-sm font-semibold text-gray-500"
-                    >2 weeks ago</span
-                  >
-                </div>
-
-                <div class="relative mb-8">
-                  <i
-                    class="fas fa-quote-left text-5xl text-pink-100 absolute -top-4 -left-2"
-                  ></i>
-                  <p
-                    class="text-gray-700 text-lg leading-relaxed relative z-10 pl-8 italic"
-                  >
-                    "Finky made my nails look absolutely stunning! The care and
-                    attention to detail are incredible. I've never felt more
-                    confident about my nails. Her work is truly an art form!"
-                  </p>
-                </div>
-
-                <div class="flex items-center">
-                  <div
-                    class="w-14 h-14 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 flex items-center justify-center text-white font-bold text-xl mr-4"
-                  >
-                    SM
-                  </div>
-                  <div>
-                    <p class="font-bold text-gray-900 text-lg">Sarah M.</p>
-                    <p class="text-gray-500">Regular Client</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 2 (hidden by default, will be shown via carousel) -->
-              <div
-                class="testimonial-card bg-white p-10 rounded-3xl shadow-xl border border-gray-100 opacity-0 absolute inset-0"
-              >
-                <div class="flex items-center mb-6">
-                  <div class="flex mr-4">
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl"></i>
-                  </div>
-                  <span class="text-sm font-semibold text-gray-500"
-                    >1 month ago</span
-                  >
-                </div>
-
-                <div class="relative mb-8">
-                  <i
-                    class="fas fa-quote-left text-5xl text-blue-100 absolute -top-4 -left-2"
-                  ></i>
-                  <p
-                    class="text-gray-700 text-lg leading-relaxed relative z-10 pl-8 italic"
-                  >
-                    "The best nail salon in Mokopane! Finky takes her time to
-                    ensure perfection. My gel manicure lasted over 3 weeks
-                    without a single chip. Will definitely be back!"
-                  </p>
-                </div>
-
-                <div class="flex items-center">
-                  <div
-                    class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-400 to-teal-400 flex items-center justify-center text-white font-bold text-xl mr-4"
-                  >
-                    TL
-                  </div>
-                  <div>
-                    <p class="font-bold text-gray-900 text-lg">Thandi L.</p>
-                    <p class="text-gray-500">First-time Client</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 3 (hidden by default, will be shown via carousel) -->
-              <div
-                class="testimonial-card bg-white p-10 rounded-3xl shadow-xl border border-gray-100 opacity-0 absolute inset-0"
-              >
-                <div class="flex items-center mb-6">
-                  <div class="flex mr-4">
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl"></i>
-                  </div>
-                  <span class="text-sm font-semibold text-gray-500"
-                    >2 months ago</span
-                  >
-                </div>
-
-                <div class="relative mb-8">
-                  <i
-                    class="fas fa-quote-left text-5xl text-purple-100 absolute -top-4 -left-2"
-                  ></i>
-                  <p
-                    class="text-gray-700 text-lg leading-relaxed relative z-10 pl-8 italic"
-                  >
-                    "I've been to many nail salons, but Finky's attention to
-                    hygiene and cleanliness is unmatched. Plus, her nail art
-                    skills are incredible! She brought my Pinterest inspiration
-                    to life perfectly."
-                  </p>
-                </div>
-
-                <div class="flex items-center">
-                  <div
-                    class="w-14 h-14 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center text-white font-bold text-xl mr-4"
-                  >
-                    NK
-                  </div>
-                  <div>
-                    <p class="font-bold text-gray-900 text-lg">Naledi K.</p>
-                    <p class="text-gray-500">Wedding Client</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carousel Dots -->
-            <div class="flex justify-center space-x-3 mt-10">
-              <button
-                class="carousel-dot w-3 h-3 rounded-full bg-pink-500 active"
-                data-index="0"
-              ></button>
-              <button
-                class="carousel-dot w-3 h-3 rounded-full bg-gray-300"
-                data-index="1"
-              ></button>
-              <button
-                class="carousel-dot w-3 h-3 rounded-full bg-gray-300"
-                data-index="2"
-              ></button>
-            </div>
-
-            <!-- Navigation Arrows -->
+            <!-- Decorative background element -->
             <div
-              class="flex justify-between absolute top-1/2 left-0 right-0 transform -translate-y-1/2 -mt-8"
+              class="absolute -top-6 -left-6 w-24 h-24 bg-pink-100 rounded-full -z-10 opacity-70"
+            ></div>
+            <div
+              class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-50 rounded-full -z-10"
+            ></div>
+
+            <!-- Testimonial Card -->
+            <div
+              class="bg-white p-10 rounded-3xl shadow-xl shadow-pink-50 border border-gray-100"
             >
-              <button
-                class="carousel-prev w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-700 hover:text-pink-600 hover:shadow-xl transition"
-              >
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button
-                class="carousel-next w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-700 hover:text-pink-600 hover:shadow-xl transition"
-              >
-                <i class="fas fa-chevron-right"></i>
-              </button>
+              <!-- Quote icon -->
+              <div class="mb-8">
+                <i class="fas fa-quote-right text-5xl text-pink-200"></i>
+              </div>
+
+              <!-- Stars -->
+              <div class="flex mb-6">
+                <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
+                <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
+                <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
+                <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
+                <i class="fas fa-star text-yellow-400 text-xl"></i>
+              </div>
+
+              <!-- Testimonial Text -->
+              <p class="text-gray-700 text-lg leading-relaxed mb-8 italic">
+                "Finky made my nails look absolutely stunning! The care and
+                attention to detail are incredible. I've never felt more
+                confident about my nails. Highly recommend her work!"
+              </p>
+
+              <!-- Client Info -->
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 flex items-center justify-center text-white font-bold text-lg mr-4"
+                >
+                  SM
+                </div>
+                <div>
+                  <p class="font-bold text-gray-900">Sarah M.</p>
+                  <p class="text-gray-500 text-sm">Regular Client</p>
+                </div>
+              </div>
             </div>
 
             <!-- Google Reviews Button -->
-            <div class="mt-10 text-center">
+            <div class="mt-12">
               <a
                 href="https://g.page/r/CfTuGLaZLEUIEBM/review"
                 target="_blank"
-                class="inline-flex items-center bg-gradient-to-r from-gray-900 to-black text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
+                class="inline-flex items-center bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105"
               >
-                <div
-                  class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 group-hover:bg-pink-50 transition"
-                >
-                  <i class="fab fa-google text-red-500 text-xl"></i>
-                </div>
-                <div class="text-left">
-                  <p class="font-bold">Read More Reviews</p>
-                  <p class="text-sm text-gray-300">4.9★ on Google</p>
-                </div>
-                <i
-                  class="fas fa-arrow-right ml-6 group-hover:ml-8 transition-all"
-                ></i>
+                <i class="fab fa-google text-white mr-3"></i>
+                <span>See More Reviews on Google</span>
+                <i class="fas fa-arrow-right ml-3 text-sm"></i>
               </a>
             </div>
           </div>
 
-          <!-- Right Side: Image & Stats -->
+          <!-- Right: Image -->
           <div class="relative">
-            <!-- Main Image -->
-            <div class="relative z-10">
-              <div class="image-border rounded-3xl overflow-hidden shadow-2xl">
+            <!-- Main Image Container -->
+            <div class="relative group">
+              <!-- Main Image -->
+              <div
+                class="rounded-3xl overflow-hidden shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
+              >
                 <img
-                  src="images/f16.jpeg"
+                  src="images/f15.jpeg"
                   alt="Beautiful nail design by Finky"
                   class="w-full h-[500px] object-cover"
-                  id="testimonial-image"
                 />
-                <!-- Image Overlay -->
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
-                ></div>
-                <!-- Caption on Image -->
-                <div class="absolute bottom-8 left-8 right-8">
-                  <p class="text-white text-2xl font-bold drop-shadow-lg">
-                    "Transforming nails into works of art"
-                  </p>
-                </div>
               </div>
 
-              <!-- Floating Stats Card -->
+              <!-- Decorative Frame Effect -->
               <div
-                class="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-2xl p-8 w-64"
+                class="absolute inset-0 rounded-3xl border-2 border-white/30 pointer-events-none"
+              ></div>
+
+              <!-- Floating Badge -->
+              <div
+                class="absolute -top-4 -right-4 bg-pink-500 text-white px-5 py-3 rounded-full font-bold shadow-lg"
               >
-                <div class="text-center">
-                  <div class="text-5xl font-bold text-pink-600 mb-2">200+</div>
-                  <p class="text-gray-600 font-medium">Happy Clients</p>
-                  <div class="flex justify-center mt-4">
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl mr-1"></i>
-                    <i class="fas fa-star text-yellow-400 text-xl"></i>
-                  </div>
+                <div class="flex items-center">
+                  <i class="fas fa-heart mr-2"></i>
+                  <span>Featured Work</span>
                 </div>
               </div>
             </div>
 
             <!-- Decorative elements -->
             <div
-              class="absolute -top-10 -left-10 w-60 h-60 bg-gradient-to-br from-pink-100 to-purple-100 rounded-full -z-10 opacity-70"
+              class="absolute -bottom-6 -left-6 w-40 h-40 bg-gradient-to-br from-pink-50 to-purple-50 rounded-full -z-10"
             ></div>
             <div
-              class="absolute -bottom-16 -right-16 w-80 h-80 bg-gradient-to-tr from-blue-50 to-cyan-50 rounded-full -z-10 opacity-70"
+              class="absolute -top-6 -right-6 w-20 h-20 bg-yellow-50 rounded-full -z-10"
             ></div>
           </div>
         </div>
@@ -1021,7 +848,47 @@
       <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Import main.js -->
-    <script src="main.js"></script>
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Add active class to nav links on scroll
+      window.addEventListener("scroll", function () {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("text-pink-600");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("text-pink-600");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
